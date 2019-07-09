@@ -9,7 +9,7 @@ viewable only by a specified set of IU users.
 
 ## Installation
 
-Run `npm install` to install dependencies. Copy [env.example](env.example) to `.env`
+Run `npm install` to install dependencies. Copy [example.env](example.env) to `.env`
 and customize for your static site.
 
 ## Running
