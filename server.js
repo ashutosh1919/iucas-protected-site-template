@@ -7,6 +7,8 @@ const passport = require('passport');
 const iucas = require('passport-iucas');
 const session = require('express-session');
 
+console.log("Starting New Server");
+
 // Grab path to env file from command line if available. 
 // Otherwise, check for a .env file adjacent to this file.
 const args = process.argv.slice(2);
@@ -73,6 +75,7 @@ passport.deserializeUser(function(username, done) {
 // Access this to login via IU CAS
 app.use('/login', passport.authenticate('iucas', { failureRedirect: '/iucas/fail' }),
   function(req, res, next) {
+    console.log("Entering Login");
     res.redirect(EXTERNAL_ROOT_PATH);
 });
 
